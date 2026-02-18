@@ -4,7 +4,7 @@
 #include <G4AutoDelete.hh>
 class Detector : public G4VUserDetectorConstruction
 {
-  public:
+  private:
     G4VPhysicalVolume* Construct() {
       G4tgbVolumeMgr::GetInstance()->AddTextFile("detector.tg");
       return G4tgbVolumeMgr::GetInstance()->ReadAndConstructDetector();
